@@ -72,8 +72,8 @@ fun FormDataDir(modifier: Modifier)
 
         HorizontalDivider(
             modifier = Modifier.padding(
-                bottom = dimensionResource(30dp),
-                top = dimensionResource(30dp
+                bottom = dimensionResource(R.dimen.padding_medium),
+                top = dimensionResource( id = R.dimen.padding_medium
         )),
     }
 }
