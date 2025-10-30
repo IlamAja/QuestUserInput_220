@@ -58,5 +58,8 @@ fun FormDataDir(modifier: Modifier)
                 }
             }
         }
+        OutlinedTextField(
+            value = textAlamat,
+        )
     }
 }
