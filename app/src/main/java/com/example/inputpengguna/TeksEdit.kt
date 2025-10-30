@@ -16,12 +16,15 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import com.example.inputpengguna.R
 
 @Composable
 fun FormDataDir(modifier: Modifier)
@@ -51,7 +54,8 @@ fun FormDataDir(modifier: Modifier)
         )
         Row {
             gender.forEach { item ->
-                row(modifier = modifier.selectable(
+                // Asumsi 'row' seharusnya adalah 'Row' atau Composable lain yang valid
+                Row(modifier = modifier.selectable(
                     selected = textJK == item,
                     onClick =  {textJK = item}),
                     verticalAlignment = Alignment.CenterVertically){
@@ -77,13 +81,14 @@ fun FormDataDir(modifier: Modifier)
         HorizontalDivider(
             modifier = Modifier.padding(
                 bottom = dimensionResource(R.dimen.padding_medium),
-                top = dimensionResource( id = R.dimen.padding_medium
-            )),
+                top = dimensionResource( id = R.dimen.padding_medium) // Tutup kurung resource
+            ), // Tutup kurung modifier
             thickness = dimensionResource(R.dimen.divider_tipis),
             color = Color.DarkGray
         )
         Button(
-            modifier = Modifier.fillMaxWidth(if ),
+            // Asumsi `if` yang terpotong seharusnya bernilai 1f agar Tombol mengisi lebar
+            modifier = Modifier.fillMaxWidth(1f),
             enabled = textAlamat.isNotEmpty(),
             onClick = {
                 nama=textNama
@@ -92,13 +97,13 @@ fun FormDataDir(modifier: Modifier)
             }
         ){
             Text(stringResource(R.string.submit))
-        }
+        } // Tutup kurung Button
 
         HorizontalDivider(
             modifier = Modifier.padding(bottom = dimensionResource(R.dimen.padding_medium),
-                top = dimensionResource(
-                    id = R.dimen.padding_medium
-                )
+                top = dimensionResource(R.dimen.padding_medium)
+
+            )
         )
     }
 }
