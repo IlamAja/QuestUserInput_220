@@ -2,8 +2,10 @@ package com.example.inputpengguna
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.selection.selectable
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
@@ -40,5 +42,13 @@ fun FormDataDir(modifier: Modifier)
                 textNama = it
             }
         )
+        Row {
+            gender.forEach { item ->
+                row(modifier = modifier.selectable(
+                    selected = textJK == item,
+                    onClick =  {textJK = item}
+                ))
+            }
+        }
     }
 }
