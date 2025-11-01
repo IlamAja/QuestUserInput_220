@@ -43,5 +43,10 @@ fun FormDataDir(modifier: Modifier = Modifier)
     var selectedGender by remember { mutableStateOf(value = "")}
     var selectedStatus by remember { mutableStateOf(value = "")}
 
+    var submittedData by remember { mutableStateOf(UserData()) }
+
+    val genders: List<String> = listOf("Laki-laki", "Perempuan")
+    val maritalStatuses: List<String> = listOf("Janda", "Lajang", "Duda")
+    val primaryColor = Color(0xFF673AB7)
 
 }
