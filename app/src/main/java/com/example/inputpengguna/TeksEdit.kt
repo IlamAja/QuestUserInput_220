@@ -113,3 +113,6 @@ fun FormDataDir(modifier: Modifier = Modifier)
                     }
                 }
             }
+
+            Text(text = "STATUS PERKAWINAN", style = MaterialTheme.typography.bodySmall, fontWeight = FontWeight.SemiBold)
+            Column(Modifier.selectableGroup()) {
