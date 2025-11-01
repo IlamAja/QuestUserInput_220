@@ -93,3 +93,12 @@ fun FormDataDir(modifier: Modifier = Modifier)
 
             Text(text = "JENIS KELAMIN", style = MaterialTheme.typography.bodySmall, fontWeight = FontWeight.SemiBold)
             Column(Modifier.selectableGroup()) {
+                genders.forEach { item ->
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .selectable(
+                                selected = selectedGender == item,
+                                onClick = { selectedGender = item },
+                                role = Role.RadioButton
+                            )
