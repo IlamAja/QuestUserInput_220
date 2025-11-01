@@ -102,3 +102,14 @@ fun FormDataDir(modifier: Modifier = Modifier)
                                 onClick = { selectedGender = item },
                                 role = Role.RadioButton
                             )
+                            .padding(vertical = 4.dp),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        RadioButton(
+                            selected = selectedGender == item,
+                            onClick = null
+                        )
+                        Text(text = item)
+                    }
+                }
+            }
