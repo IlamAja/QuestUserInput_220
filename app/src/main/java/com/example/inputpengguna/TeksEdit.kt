@@ -57,5 +57,12 @@ fun FormDataDir(modifier: Modifier = Modifier)
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
 
+        Column(
+            modifier = Modifier
+                .fillMaxWidth()
+                .background(primaryColor)
+                .padding(vertical = 16.dp),
+            horizontalAlignment = Alignment.Start
+        ) {
 
 }
