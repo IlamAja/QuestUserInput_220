@@ -145,3 +145,20 @@ fun FormDataDir(modifier: Modifier = Modifier)
                 placeholder = { Text(text = "Alamat") },
                 onValueChange = { textAlamat = it }
             )
+
+            Button(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(top = 8.dp),
+                enabled = textNama.isNotEmpty() && textAlamat.isNotEmpty() && selectedGender.isNotEmpty() && selectedStatus.isNotEmpty(),
+                onClick = {
+                    submittedData = UserData(
+                        nama = textNama,
+                        gender = selectedGender,
+                        status = selectedStatus,
+                        alamat = textAlamat
+                    )
+                }
+            ) {
+                Text("Submit")
+            }
