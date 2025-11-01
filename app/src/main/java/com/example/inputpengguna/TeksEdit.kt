@@ -49,4 +49,13 @@ fun FormDataDir(modifier: Modifier = Modifier)
     val maritalStatuses: List<String> = listOf("Janda", "Lajang", "Duda")
     val primaryColor = Color(0xFF673AB7)
 
+    Column(
+
+        modifier = modifier
+            .padding(horizontal = 16.dp)
+            .fillMaxWidth(),
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+
+
 }
