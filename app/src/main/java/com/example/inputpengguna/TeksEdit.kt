@@ -116,3 +116,12 @@ fun FormDataDir(modifier: Modifier = Modifier)
 
             Text(text = "STATUS PERKAWINAN", style = MaterialTheme.typography.bodySmall, fontWeight = FontWeight.SemiBold)
             Column(Modifier.selectableGroup()) {
+                maritalStatuses.forEach { item ->
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .selectable(
+                                selected = selectedStatus == item,
+                                onClick = { selectedStatus = item },
+                                role = Role.RadioButton
+                            )
