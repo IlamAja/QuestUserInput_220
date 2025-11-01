@@ -90,3 +90,6 @@ fun FormDataDir(modifier: Modifier = Modifier)
                 placeholder = { Text(text = "Isian nama lengkap") },
                 onValueChange = { textNama = it }
             )
+
+            Text(text = "JENIS KELAMIN", style = MaterialTheme.typography.bodySmall, fontWeight = FontWeight.SemiBold)
+            Column(Modifier.selectableGroup()) {
