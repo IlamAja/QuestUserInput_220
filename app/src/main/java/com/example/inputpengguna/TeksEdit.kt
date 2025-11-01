@@ -82,3 +82,11 @@ fun FormDataDir(modifier: Modifier = Modifier)
             horizontalAlignment = Alignment.Start
         ) {
 
+            Text(text = "NAMA LENGKAP", style = MaterialTheme.typography.bodySmall, fontWeight = FontWeight.SemiBold)
+            OutlinedTextField(
+                value = textNama,
+                singleLine = true,
+                modifier = Modifier.fillMaxWidth(),
+                placeholder = { Text(text = "Isian nama lengkap") },
+                onValueChange = { textNama = it }
+            )
