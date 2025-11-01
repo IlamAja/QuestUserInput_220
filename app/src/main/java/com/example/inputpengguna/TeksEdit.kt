@@ -174,4 +174,15 @@ fun FormDataDir(modifier: Modifier = Modifier)
                 ElevatedCard(
                     elevation = CardDefaults.cardElevation(defaultElevation = 4.dp),
                     modifier = Modifier.fillMaxWidth()
-                )
+                ) {
+                    Column(modifier = Modifier.padding(16.dp)) {
+                        Text(text = "Nama Lengkap: ${submittedData.nama}")
+                        Text(text = "Jenis Kelamin: ${submittedData.gender}")
+                        Text(text = "Status Perkawinan: ${submittedData.status}")
+                        Text(text = "Alamat: ${submittedData.alamat}")
+                    }
+                }
+            }
+        }
+    }
+}
