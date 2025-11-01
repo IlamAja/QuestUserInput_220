@@ -162,3 +162,12 @@ fun FormDataDir(modifier: Modifier = Modifier)
             ) {
                 Text("Submit")
             }
+
+            HorizontalDivider(Modifier.padding(vertical = 16.dp))
+
+            if (submittedData.nama.isNotEmpty()) {
+                Text(
+                    text = "DATA TERSIMPAN:",
+                    fontWeight = FontWeight.Bold,
+                    modifier = Modifier.padding(bottom = 8.dp)
+                )
