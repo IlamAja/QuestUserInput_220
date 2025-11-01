@@ -64,5 +64,10 @@ fun FormDataDir(modifier: Modifier = Modifier)
                 .padding(vertical = 16.dp),
             horizontalAlignment = Alignment.Start
         ) {
-
-}
+            Text(
+                text = "Formulir Pendaftaran",
+                color = Color.White,
+                fontWeight = FontWeight.Bold,
+                modifier = Modifier.padding(start = 16.dp)
+            )
+        }
