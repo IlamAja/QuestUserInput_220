@@ -171,3 +171,7 @@ fun FormDataDir(modifier: Modifier = Modifier)
                     fontWeight = FontWeight.Bold,
                     modifier = Modifier.padding(bottom = 8.dp)
                 )
+                ElevatedCard(
+                    elevation = CardDefaults.cardElevation(defaultElevation = 4.dp),
+                    modifier = Modifier.fillMaxWidth()
+                )
